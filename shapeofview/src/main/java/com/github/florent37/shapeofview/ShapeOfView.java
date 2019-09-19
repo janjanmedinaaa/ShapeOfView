@@ -2,7 +2,6 @@ package com.github.florent37.shapeofview;
 
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -16,18 +15,17 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.ViewCompat;
 import androidx.appcompat.content.res.AppCompatResources;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewOutlineProvider;
-import android.widget.FrameLayout;
 
 import com.github.florent37.shapeofview.manager.ClipManager;
 import com.github.florent37.shapeofview.manager.ClipPathManager;
 
-public class ShapeOfView extends FrameLayout {
+public class ShapeOfView extends ConstraintLayout {
 
     private final Paint clipPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Path clipPath = new Path();
